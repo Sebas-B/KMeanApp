@@ -1,0 +1,136 @@
+{% include 'header.html' %}
+
+<form method="post" action="/store" enctype="multipart/form-data">
+
+    <label for="optimistaR">¿Te consideras una persona optimista?</label>
+    <select name="optimistaR" id="optimistaR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="pesimistaR">¿Te consideras una persona pesimista?</label>
+    <select name="pesimistaR" id="pesimistaR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="confianzaR">¿Qué tanta confianza tienes en ti mismo?</label>
+    <select name="confianzaR" id="confianzaR">
+        <option value="0" selected>0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br>
+
+    <label for="atencionR">¿Eres de las personas que necesitan que se les preste atención?</label>
+    <select name="atencionR" id="atencionR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="afectoR">¿Te gusta el afecto físico?</label>
+    <select name="afectoR" id="afectoR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="extrovertidaR">¿Consideras que tu personalidad es extrovertida?</label>
+    <select name="extrovertidaR" id="extrovertidaR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="introvertidaR">¿Consideras que tu personalidad es introvertida?</label>
+    <select name="introvertidaR" id="introvertidaR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="inteligenteR">¿Te consideras una persona inteligente?</label>
+    <select name="inteligenteR" id="inteligenteR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="deprimeR">¿Te deprimes fácilmente?</label>
+    <select name="deprimeR" id="deprimeR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="fiestaR">Cuando sales a divertirte, ¿Crees que eres el alma de la fiesta?</label>
+    <select name="fiestaR" id="fiestaR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="fisicoR">¿Confías en tu aspecto físico?</label>
+    <select name="fisicoR" id="fisicoR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="ejercicioR">¿Haces ejercicio?</label>
+    <select name="ejercicioR" id="ejercicioR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="solitariaR">¿Eres una persona solitaria?</label>
+    <select name="solitariaR" id="solitariaR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="viajarR">¿Te gusta viajar?</label>
+    <select name="viajarR" id="viajarR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+
+    <br>
+    <label for="estacionR">¿Cuál es tu estación favorita del año?</label>
+    <select name="estacionR" id="estacionR">
+        <option value="0" selected>Primavera</option>
+        <option value="1">Verano</option>
+        <option value="2">Otoño</option>
+        <option value="3">Invierno</option>
+    </select>
+    <br>
+
+    <label for="emprendedorR">¿Te consideras emprendedor?</label>
+    <select name="emprendedorR" id="emprendedorR">
+        <option value="0" selected>No</option>
+        <option value="1">Si</option>
+    </select>
+    <br>
+
+    <label for="elementoR">¿Con cuál elemento te identificas más?</label>
+    <select name="elementoR" id="elementoR">
+        <option value="0" selected>Agua</option>
+        <option value="1">Viento</option>
+        <option value="2">Tierra</option>
+        <option value="3">Fuego</option>
+    </select>
+    <br>
+
+    <input type="submit" value="Agregar">
+
+</form>
+
+{% include 'footer.html' %}

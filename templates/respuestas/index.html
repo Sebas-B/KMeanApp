@@ -1,0 +1,66 @@
+{% include 'header.html' %}
+
+<table id="respuesta" class="table display" style="width:100%">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>R optimista</th>
+            <th>R pesimista</th>
+            <th>R confianza</th>
+            <th>R atencion</th>
+            <th>R afecto</th>
+            <th>R extrovertido</th>
+            <th>R introvertido</th>
+            <th>R inteligente</th>
+            <th>R deprime</th>
+            <th>R fiesta</th>
+            <th>R fisico</th>
+            <th>R ejercicio</th>
+            <th>R solicitria</th>
+            <th>R viajar</th>
+            <th>R estacion</th>
+            <th>R emprendedor</th>
+            <th>R elemento</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for respuesta in respuestas %}
+        <tr>
+            <td>{{respuesta[0]}}</td>
+            <td>{{respuesta[1]}}</td>
+            <td>{{respuesta[2]}}</td>
+            <td>{{respuesta[3]}}</td>
+            <td>{{respuesta[4]}}</td>
+            <td>{{respuesta[5]}}</td>
+            <td>{{respuesta[6]}}</td>
+            <td>{{respuesta[7]}}</td>
+            <td>{{respuesta[8]}}</td>
+            <td>{{respuesta[9]}}</td>
+            <td>{{respuesta[10]}}</td>
+            <td>{{respuesta[11]}}</td>
+            <td>{{respuesta[12]}}</td>
+            <td>{{respuesta[13]}}</td>
+            <td>{{respuesta[14]}}</td>
+            <td>{{respuesta[15]}}</td>
+            <td>{{respuesta[16]}}</td>
+            <td>{{respuesta[17]}}</td>
+            <td><a href="/destroy/{{respuesta[0]}}">Eliminar</a></td>
+            <td></td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        setTimeout(function () {
+            $('#respuesta').DataTable({
+                responsive: true
+            });
+        }, 500);
+    });
+</script>
+
+{% include 'footer.html' %}
