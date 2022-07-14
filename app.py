@@ -95,13 +95,14 @@ def predict():
         l = []  # Lista de distancias
 
         for i, this_segment in enumerate(freezed_centroids):
-            dist = distance.euclidean(*vals, this_segment)
-            l.append(dist)
+            #dist = distance.euclidean(*vals, this_segment)
+            d=np.array([*vals, this_segment])
+            l.append(d)
             index_min = np.argmin(l)
             assigned_clusters.append(index_min)
 
         return render_template(
-            'predict.html', result_value=f'Segmento Calculado = # {index_min}'
+            './respuestas/predict.html', result_value=f'Felicitaciones amigo pertences al grupo = # {index_min}'
         )
 
 if __name__ == '__main__':
