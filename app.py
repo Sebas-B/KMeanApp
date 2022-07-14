@@ -1,4 +1,3 @@
-import json
 import pickle
 from scipy.spatial import distance
 from flask import Flask
@@ -51,7 +50,36 @@ def predict():
         return 'La url /predict esta siendo accesada directamentamente. Por favor dirigete a la pagina principal'
 
     if request.method == 'POST':
+        _optimista = request.form['optimistaR']
+        _pesimista = request.form['pesimistaR']
+        _confianza = request.form['confianzaR']
+        _atencion = request.form['atencionR']
+        _afecto = request.form['afectoR']
+        _extrovertida = request.form['extrovertidaR']
+        _introvertida = request.form['introvertidaR']
+        _inteligente = request.form['inteligenteR']
+        _deprime = request.form['deprimeR']
+        _fiesta = request.form['fiestaR']
+        _fisico = request.form['fisicoR']
+        _ejercicio = request.form['ejercicioR']
+        _solitaria = request.form['solitariaR']
+        _viajar = request.form['viajarR']
+        _estacion = request.form['estacionR']
+        _emprendedor = request.form['emprendedorR']
+        _elemento = request.form['elementoR']
+
+        sql = "INSERT INTO `respuestas` (`id_respuesta`, `optimistaR`, `pesimistaR`, `confianzaR`, `atencionR`, `afectoR`, `extrovertidaR`, `introvertidaR`, `inteligenteR`, `deprimeR`, `fiestaR`, `fisicoR`, `ejercicioR`, `solitariaR`, `viajarR`, `estacionR`, `emprendedorR`, `elementoR`) VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
+
+        datos = (int(_optimista), int(_pesimista), int(_confianza), int(_atencion), int(_afecto), int(_extrovertida), int(_introvertida), int(_inteligente), int(_deprime), int(_fiesta), int(_fisico), int(_ejercicio), int(_solitaria), int(_viajar), int(_estacion), int(_emprendedor), int(_elemento))
+
+        conn = mysql.connect()
+        cursor = conn.cursor()
+        cursor.execute(sql, datos)
+        conn.commit()
+        
         input_val = request.form
+
+        input_val
 
         if input_val != None:
             # collecting values
@@ -75,41 +103,6 @@ def predict():
         return render_template(
             'predict.html', result_value=f'Segmento Calculado = # {index_min}'
         )
-
-
-@app.route('/store', methods=['POST'])
-def storage():
-    _optimista = request.form['optimistaR']
-    _pesimista = request.form['pesimistaR']
-    _confianza = request.form['confianzaR']
-    _atencion = request.form['atencionR']
-    _afecto = request.form['afectoR']
-    _extrovertida = request.form['extrovertidaR']
-    _introvertida = request.form['introvertidaR']
-    _inteligente = request.form['inteligenteR']
-    _deprime = request.form['deprimeR']
-    _fiesta = request.form['fiestaR']
-    _fisico = request.form['fisicoR']
-    _ejercicio = request.form['ejercicioR']
-    _solitaria = request.form['solitariaR']
-    _viajar = request.form['viajarR']
-    _estacion = request.form['estacionR']
-    _emprendedor = request.form['emprendedorR']
-    _elemento = request.form['elementoR']
-
-    sql = "INSERT INTO `respuestas` (`id_respuesta`, `optimistaR`, `pesimistaR`, `confianzaR`, `atencionR`, `afectoR`, `extrovertidaR`, `introvertidaR`, `inteligenteR`, `deprimeR`, `fiestaR`, `fisicoR`, `ejercicioR`, `solitariaR`, `viajarR`, `estacionR`, `emprendedorR`, `elementoR`) VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"
-
-    datos = (int(_optimista), int(_pesimista), int(_confianza), int(_atencion), int(_afecto), int(_extrovertida), int(_introvertida), int(_inteligente), int(
-        _deprime), int(_fiesta), int(_fisico), int(_ejercicio), int(_solitaria), int(_viajar), int(_estacion), int(_emprendedor), int(_elemento))
-
-    conn = mysql.connect()
-    cursor = conn.cursor()
-    cursor.execute(sql, datos)
-    conn.commit()
-    val = datos
-    post = request.post('/predict', json = val)
-    return post
-
 
 if __name__ == '__main__':
     app.run(debug=True)

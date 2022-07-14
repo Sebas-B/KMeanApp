@@ -1,26 +1,30 @@
 {% include 'header.html' %}
-
+<center>
+    <h1 style="color:blue; text-align:center">Resultados</h1>
+</center>
+<img src="../../static/images/grafico.png" style="width: 40px; margin-left: 25px;" ALIGN=left href="/admin">
+<img src="../../static/images/sobresalir.png" style="width: 40px; margin-left: 25px" ALIGN=left>
 <table id="respuesta" class="table display" style="width:100%">
     <thead>
         <tr>
             <th>#</th>
-            <th>R optimista</th>
-            <th>R pesimista</th>
-            <th>R confianza</th>
-            <th>R atencion</th>
-            <th>R afecto</th>
-            <th>R extrovertido</th>
-            <th>R introvertido</th>
-            <th>R inteligente</th>
-            <th>R deprime</th>
-            <th>R fiesta</th>
-            <th>R fisico</th>
-            <th>R ejercicio</th>
-            <th>R solicitria</th>
-            <th>R viajar</th>
-            <th>R estacion</th>
-            <th>R emprendedor</th>
-            <th>R elemento</th>
+            <th>Optimista</th>
+            <th>Pesimista</th>
+            <th>Confianza</th>
+            <th>Atención</th>
+            <th>Afecto</th>
+            <th>Extrovertido</th>
+            <th>Introvertido</th>
+            <th>Inteligente</th>
+            <th>Deprimente</th>
+            <th>Amigable</th>
+            <th>Físico</th>
+            <th>Ejercicio</th>
+            <th>Solicitria</th>
+            <th>Viajes</th>
+            <th>Estación</th>
+            <th>Emprendedor</th>
+            <th>Elemento</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -45,8 +49,8 @@
             <td>{{respuesta[15]}}</td>
             <td>{{respuesta[16]}}</td>
             <td>{{respuesta[17]}}</td>
-            <td><a href="/destroy/{{respuesta[0]}}">Eliminar</a></td>
-            <td></td>
+            <td><a href="/destroy/{{respuesta[0]}}">
+                <button type="button" class="btn btn-danger">Eliminar</button></a></td>
         </tr>
         {% endfor %}
 
