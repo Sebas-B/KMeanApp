@@ -1,18 +1,45 @@
 {% include 'header.html' %}
 
-<div class="prediction">
-    <div class="top-heading">
-        <hr>
-        <hr>
-        <hr>
-        <hr>
+{% if result_value3 %}
+<div class="prediction card" style="margin-top: 4%; margin-left: 35%; position:absolute;">
+    <div class="card-head" style="text-align:center ;">Predicion KMeans</div>
+    <div class="top-heading card-body">
         <b>
-
-            {{ result_value}}
-
+            {{ result_value3 }}
         </b>
     </div>
 </div>
+{% endif %}
 
+{% if result_value2 %}
+<div class="prediction card" style="margin-top: 4%; margin-left: 35%; position:absolute;">
+    <div class="card-head" style="text-align:center ;">Predicion KMeans</div>
+    <div class="top-heading card-body">
+        <b>
+            
+        </b>
+    </div>
+</div>
+{% endif %}
 
-{% include 'footer.html' %}
+{% if result_value1 %}
+<div class="prediction card" style="margin-top: 4%; margin-left: 35%; position:absolute;">
+    <div class="card-head" style="text-align:center ;">Predicion KMeans</div>
+    <div class="top-heading card-body">
+        <b>
+            {{ result_value1 }}
+        </b>
+    </div>
+</div>
+{% endif %}
+
+{% if result_value0 %}
+<div class="prediction card" style="margin-top: 4%; margin-left: 35%; position:absolute;">
+    <div class="card-head" style="text-align:center ;">Predicion KMeans</div>
+    <div class="top-heading card-body">
+        <b>
+            {{ result_value0 }}
+        </b>
+    </div>
+</div>
+{% endif %}

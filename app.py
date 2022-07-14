@@ -101,9 +101,18 @@ def predict():
             index_min = np.argmin(l)
             assigned_clusters.append(index_min)
 
-        return render_template(
-            './respuestas/predict.html', result_value=f'Felicitaciones amigo pertences al grupo = # {index_min}'
-        )
+        if index_min == 3:
+            return render_template(
+            './respuestas/predict.html', result_value3=f'Felicitaciones amigo pertences al grupo = # {index_min}')
+        elif index_min == 2:
+            return render_template(
+            './respuestas/predict.html', result_value2=f'Felicitaciones amigo pertences al grupo = # {index_min}')
+        elif index_min == 1 :
+            return render_template(
+            './respuestas/predict.html', result_value1=f'Felicitaciones amigo pertences al grupo = # {index_min}')
+        elif index_min == 0:
+            return render_template(
+            './respuestas/predict.html', result_value0=f'Felicitaciones amigo pertences al grupo = # {index_min}')
 
 if __name__ == '__main__':
     app.run(debug=True)
