@@ -1,6 +1,6 @@
 {% include 'header.html' %}
 
-<form method="post" action="/store" enctype="multipart/form-data">
+<form method="POST" action="/predict">
 
     <label for="optimistaR">¿Te consideras una persona optimista?</label>
     <select name="optimistaR" id="optimistaR">
@@ -129,8 +129,9 @@
     </select>
     <br>
 
-    <input type="submit" value="Agregar">
-
+    <button type="submit" class="btn" onClick="window.location.href='/predict'">
+        Responder
+    </button>
 </form>
 
 {% include 'footer.html' %}
