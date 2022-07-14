@@ -46,7 +46,7 @@ def plot_clusters(data, labels, centroids, iteration):
     plt.scatter(x=data_2d[:,0], y=data_2d[:,1], c=labels, label=labels )
     plt.scatter(x=centroids_2d[:,0], y=centroids_2d[:,1], c="red", marker ='*', label='centroides')
     plt.grid(True)
-    plt.show()
+    plt.savefig(f'./static/images/imgAgrupamiento/pic{iteration}.png')
 
 max_iterations = 10
 k = 4
