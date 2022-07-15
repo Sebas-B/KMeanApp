@@ -103,16 +103,16 @@ def predict():
 
         if index_min == 3:
             return render_template(
-            './respuestas/predict.html', result_value3=f'Felicitaciones amigo pertences al grupo = # {index_min}')
+            './respuestas/predict.html', result_value3='Felicitaciones amigx pertences al grupo = A')
         elif index_min == 2:
             return render_template(
-            './respuestas/predict.html', result_value2=f'Felicitaciones amigo pertences al grupo = # {index_min}')
+            './respuestas/predict.html', result_value2='Felicitaciones amigx pertences al grupo = B')
         elif index_min == 1 :
             return render_template(
-            './respuestas/predict.html', result_value1=f'Felicitaciones amigo pertences al grupo = # {index_min}')
+            './respuestas/predict.html', result_value1='Felicitaciones amigx pertences al grupo = C')
         elif index_min == 0:
             return render_template(
-            './respuestas/predict.html', result_value0=f'Felicitaciones amigo pertences al grupo = # {index_min}')
+            './respuestas/predict.html', result_value0='Felicitaciones amigx pertences al grupo = D')
 
 if __name__ == '__main__':
     app.run(debug=True)
