@@ -8,10 +8,10 @@ import numpy as np
 app = Flask(__name__)
 
 mysql = MySQL()
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'zodiacales'
+app.config['MYSQL_DATABASE_HOST'] = 'sql538.main-hosting.eu'
+app.config['MYSQL_DATABASE_USER'] = 'u544016274_Sebas'
+app.config['MYSQL_DATABASE_PASSWORD'] = '_YHHq5xrmXV_q86KS#'
+app.config['MYSQL_DATABASE_DB'] = 'u544016274_Zodiacales'
 mysql.init_app(app)
 
 
